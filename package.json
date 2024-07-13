@@ -1,0 +1,22 @@
+{
+  "name": "interno",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

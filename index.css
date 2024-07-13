@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-jost;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-dm font-normal leading-[125%] text-primaryDark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply flex items-center gap-[9px] rounded-[18px] bg-primaryDark px-[54px] py-[26px] text-xs font-semibold leading-[125%] tracking-wide text-white shadow-[0px_10px_20px_0px_#C0C0C0] transition-colors hover:bg-primaryLight hover:text-black;
+  }
+
+  @media (max-width: 765px) {
+    .btn {
+      @apply px-[24px] py-[20px];
+    }
+  }
+
+  .btn svg {
+    @apply stroke-primaryGold;
+  }
+
+  .btn_gold {
+    @apply bg-primaryGold;
+  }
+
+  .btn_gold svg {
+    @apply stroke-primaryDark;
+  }
+
+  .link {
+    @apply flex items-center gap-[9px] text-xs font-semibold transition-colors hover:text-primaryGold;
+  }
+
+  .paragraph {
+    @apply text-sm/normal font-normal text-[#4D5053];
+  }
+
+  .paragraph_sm {
+    @apply text-xs;
+  }
+
+  .paragraph_lg {
+    @apply text-base;
+  }
+}
