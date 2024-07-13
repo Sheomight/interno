@@ -18,7 +18,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center gap-[9px] rounded-[18px] bg-primaryDark px-[54px] py-[26px] text-xs font-semibold leading-[125%] tracking-wide text-white shadow-[0px_10px_20px_0px_#C0C0C0] transition-colors hover:bg-primaryLight hover:text-black;
+    @apply flex items-center gap-[9px] rounded-[18px] bg-primaryDark px-[54px] py-[26px] text-xs font-semibold leading-[125%] tracking-wide text-white transition-colors hover:bg-primaryLight hover:text-black;
   }
 
   @media (max-width: 765px) {
