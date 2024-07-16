@@ -1,5 +1,4 @@
-import "normalize.css";
-import "./index.css";
+import "./index.css"
 
-import "./src/js/animation";
-import "./src/js/menu";
+import "./src/js/animation"
+import "./src/js/menu"

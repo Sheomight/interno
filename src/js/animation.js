@@ -1,15 +1,30 @@
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return rect.bottom <= window.innerHeight;
-}
+import { gsap } from "gsap"
 
-function animateScrollingElements() {
-  const triggerElement = document.getElementById("trigger");
-  const elementToAnimate = document.getElementById("home");
-  if (isElementInViewport(triggerElement) && window.innerWidth > 1200) {
-    elementToAnimate.classList.add("animate-goFull");
-  }
-}
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-document.addEventListener("DOMContentLoaded", animateScrollingElements);
-window.addEventListener("scroll", animateScrollingElements);
+gsap.registerPlugin(ScrollTrigger)
+
+if (window.innerWidth > 1200) {
+  gsap.fromTo(
+    "#home",
+    {
+      height: 758,
+      borderRadius: 70,
+      paddingLeft: 52,
+      paddingRight: 52,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#trigger",
+        start: "top 150px",
+        end: "300px 200px",
+        scrub: 1,
+      },
+      borderRadius: "0px 0px 0px 291px",
+      maxWidth: "100vw",
+      height: 1042,
+      padding: 0,
+      duration: 0.7,
+    },
+  )
+}

@@ -40,32 +40,6 @@ export default {
         "3xl": "65px",
         "4xl": "85px",
       },
-      keyframes: {
-        "go-full": {
-          "0%": {
-            borderRadius: "70px",
-            height: "758px",
-          },
-          "25%": {
-            maxWidth: "85vw",
-          },
-          "50%": {
-            maxWidth: "90vw",
-          },
-          "75%": {
-            maxWidth: "95vw",
-          },
-          "100%": {
-            maxWidth: "100vw",
-            borderRadius: "0px 0px 0px 291px",
-            height: "1042px",
-            padding: 0,
-          },
-        },
-      },
-      animation: {
-        goFull: ".6s go-full linear 1",
-      },
       boxShadow: {
         article: "0px_10px_30px_0px_rgba(255, 255, 255, 0.25)",
         btnDark: "0px_10px_20px_0px_rgb(31, 32, 34)",
@@ -78,4 +52,4 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate"), require("autoprefixer")],
-};
+}

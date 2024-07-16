@@ -86,7 +86,7 @@
       <!-- Mobile menu -->
       <nav
         id="mobile-menu"
-        class="fixed bottom-0 left-0 right-0 top-0 hidden bg-primaryLight md:hidden"
+        class="fixed bottom-0 left-0 right-0 top-0 z-10 hidden bg-primaryLight md:hidden"
       >
         <ul
           class="mx-auto mt-14 flex w-1/2 flex-col items-center gap-9 lg:gap-12"
@@ -155,6 +155,7 @@
           </li>
         </ul>
       </nav>
+      <!-- Search button -->
       <button class="ml-auto md:ml-[30px]">
         <svg
           width="22.502930"
@@ -173,9 +174,10 @@
           />
         </svg>
       </button>
+      <!-- Burger button -->
       <button
         id="burger"
-        class="group relative ml-[30px] h-[30px] w-[30px] md:hidden"
+        class="group relative z-20 ml-[30px] h-[30px] w-[30px] md:hidden"
       >
         <span
           class="absolute left-0 top-[6px] block h-[2px] w-full bg-primaryDark transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"
@@ -191,13 +193,13 @@
     <!-- Home section -->
     <section
       id="home"
-      class="mx-auto h-[758px] transition-all fill-mode-forwards md:container md:rounded-[70px] md:px-[52px]"
+      class="relative mx-auto h-[758px] transition-all md:container md:rounded-[70px] md:px-[52px]"
       style="
         background: url(./src/assets/images/home-bg.png) no-repeat 50% 100%;
       "
     >
       <div class="container flex h-full flex-col items-start justify-center">
-        <h1 class="text-2xl xl:text-3xl 2xl:text-4xl">
+        <h1 class="text-2xl lg:text-3xl 2xl:text-4xl">
           Let Your Home <br />
           Be Unique
         </h1>
@@ -207,7 +209,7 @@
           There are many variations of the passages of lorem Ipsum
           fromavailable, majority.
         </p>
-        <button class="btn shadow-btnDark mt-[21px]">
+        <button class="btn mt-[21px] shadow-btnDark">
           <span>Get Started</span>
           <svg
             width="17.150391"
@@ -227,14 +229,11 @@
           </svg>
         </button>
       </div>
-      <div
-        id="trigger"
-        class="absolute bottom-[-100px] h-[10px] w-3 opacity-0"
-      ></div>
+      <div id="trigger" class="absolute top-[5%] h-[10px] w-3 opacity-0"></div>
     </section>
     <!-- Work section -->
     <div
-      class="mt-sectionLG container flex flex-col items-center gap-[60px] md:flex-row md:flex-wrap md:justify-around"
+      class="container mt-sectionLG flex flex-col items-center gap-[60px] md:flex-row md:flex-wrap md:justify-around"
     >
       <div class="flex max-w-[358px] flex-col items-center text-center">
         <h2 class="text-lg">Project Plan</h2>
@@ -320,7 +319,7 @@
     </div>
     <!-- About Us -->
     <section
-      class="mt-sectionLG container flex flex-col items-center justify-between gap-16 text-center xl:flex-row xl:text-left"
+      class="container mt-sectionLG flex flex-col items-center justify-between gap-16 text-center xl:flex-row xl:text-left"
     >
       <div
         class="order-2 mt-[43px] flex flex-col items-center md:w-[70%] xl:order-1 xl:basis-[37%] xl:items-start"
@@ -337,7 +336,7 @@
           class="mt-[45px] flex max-w-[300px] items-center justify-between gap-[15px]"
         >
           <div
-            class="bg-backgroundLight relative h-[93px] w-[93px] rounded-[50%] after:absolute after:left-1/2 after:top-1/2 after:h-[35px] after:w-[35px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-call after:bg-no-repeat"
+            class="relative h-[93px] w-[93px] rounded-[50%] bg-backgroundLight after:absolute after:left-1/2 after:top-1/2 after:h-[35px] after:w-[35px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-call after:bg-no-repeat"
           ></div>
           <div>
             <span
@@ -350,7 +349,7 @@
             >
           </div>
         </div>
-        <button class="btn shadow-btnLight mt-[47px]">
+        <button class="btn mt-[47px] shadow-btnLight">
           <span>Get Free Estimate</span>
           <svg
             width="17.150391"
@@ -380,7 +379,7 @@
     <!-- Reviews -->
     <section class="sm:container">
       <div
-        class="bg-backgroundLight mt-sectionLG rounded-[70px] px-6 py-[88px]"
+        class="mt-sectionLG rounded-[70px] bg-backgroundLight px-6 py-[88px]"
       >
         <h2 class="text-center text-xl tracking-[2%] md:text-2xl">
           What the People Thinks <br />
@@ -439,7 +438,7 @@
     </section>
     <!-- Clients -->
     <div
-      class="mt-sectionMD container flex flex-wrap justify-center gap-[108px] xl:justify-between"
+      class="container mt-sectionMD grid grid-cols-[250px] items-center justify-center justify-items-center gap-[108px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
     >
       <img src="./src/assets/images/logos/logo1.svg" alt="client's logo" />
       <img src="./src/assets/images/logos/logo2.svg" alt="client's logo" />
@@ -448,7 +447,7 @@
       <img src="./src/assets/images/logos/logo5.svg" alt="client's logo" />
     </div>
     <!-- Projects -->
-    <section class="mt-sectionMD container">
+    <section class="container mt-sectionMD">
       <h2 class="text-center text-xl/tight md:text-2xl">Follow Our Projects</h2>
       <p class="paragraph md:paragraph_lg mx-auto mt-2 text-center md:w-[50%]">
         It is a long established fact that a reader will be distracted by the of
@@ -465,13 +464,13 @@
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-lg/tight">Modern Kitchan</h3>
-              <span class="text-textSmall text-base/normal"
+              <span class="text-base/normal text-textSmall"
                 >Decor / Artchitecture</span
               >
             </div>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[70px] w-[70px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[70px] w-[70px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
@@ -480,13 +479,13 @@
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-lg/tight">Modern Kitchan</h3>
-              <span class="text-textSmall text-base/normal"
+              <span class="text-base/normal text-textSmall"
                 >Decor / Artchitecture</span
               >
             </div>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[70px] w-[70px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[70px] w-[70px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
@@ -495,13 +494,13 @@
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-lg/tight">Modern Kitchan</h3>
-              <span class="text-textSmall text-base/normal"
+              <span class="text-base/normal text-textSmall"
                 >Decor / Artchitecture</span
               >
             </div>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[70px] w-[70px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[70px] w-[70px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
@@ -510,20 +509,20 @@
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-lg/tight">Modern Kitchan</h3>
-              <span class="text-textSmall text-base/normal"
+              <span class="text-base/normal text-textSmall"
                 >Decor / Artchitecture</span
               >
             </div>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[70px] w-[70px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[70px] w-[70px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
       </div>
     </section>
     <!-- Statistics -->
-    <div class="bg-backgroundLight mt-sectionLG">
+    <div class="mt-sectionLG bg-backgroundLight">
       <div
         class="container flex flex-col items-center justify-around gap-[30px] py-[75px] md:flex-row md:py-[150px]"
       >
@@ -563,7 +562,7 @@
       </div>
     </div>
     <!-- Blog -->
-    <section class="mt-sectionLG container flex flex-col items-center">
+    <section class="container mt-sectionLG flex flex-col items-center">
       <h2 class="text-center text-xl md:text-2xl">Articles & News</h2>
       <p class="paragraph md:paragraph_lg mt-[12px] text-center md:w-[50%]">
         It is a long established fact that a reader will be distracted by the of
@@ -574,7 +573,7 @@
         class="lg::justify-between mt-[52px] flex flex-wrap justify-center gap-[48px]"
       >
         <div
-          class="shadow-article even:bg-backgroundLight max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px]"
+          class="max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px] shadow-article even:bg-backgroundLight"
         >
           <div class="relative">
             <img
@@ -583,7 +582,7 @@
               alt="Article preview"
             />
             <span
-              class="text-2xs text-textSmall absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px]"
+              class="absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px] text-2xs text-textSmall"
               >Kitchan Design</span
             >
           </div>
@@ -596,12 +595,12 @@
             </span>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[52px] w-[52px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[52px] w-[52px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
         <div
-          class="even:bg-backgroundLight shadow-article max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px]"
+          class="max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px] shadow-article even:bg-backgroundLight"
         >
           <div class="relative">
             <img
@@ -610,7 +609,7 @@
               alt="Article preview"
             />
             <span
-              class="text-2xs text-textSmall absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px]"
+              class="absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px] text-2xs text-textSmall"
               >Living Design</span
             >
           </div>
@@ -623,12 +622,12 @@
             </span>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[52px] w-[52px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat even:bg-white hover:bg-primaryGold"
+              class="relative h-[52px] w-[52px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat even:bg-white hover:bg-primaryGold"
             ></a>
           </div>
         </div>
         <div
-          class="even:bg-backgroundLight shadow-article max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px]"
+          class="max-w-[382px] rounded-[62px] border border-[#E7E7E7] p-[21px] shadow-article even:bg-backgroundLight"
         >
           <div class="relative">
             <img
@@ -637,7 +636,7 @@
               alt="Article preview"
             />
             <span
-              class="text-2xs text-textSmall absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px]"
+              class="absolute bottom-[20px] left-[20px] rounded-[8px_8px_8px_0] bg-white px-[11px] py-[5px] text-2xs text-textSmall"
               >Interior Design</span
             >
           </div>
@@ -650,7 +649,7 @@
             </span>
             <a
               href="#"
-              class="bg-backgroundLight relative h-[52px] w-[52px] rounded-full transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
+              class="relative h-[52px] w-[52px] rounded-full bg-backgroundLight transition-colors after:absolute after:left-1/2 after:top-1/2 after:h-[20px] after:w-[10px] after:-translate-x-1/2 after:-translate-y-1/2 after:bg-arrow after:bg-no-repeat hover:bg-primaryGold"
             ></a>
           </div>
         </div>
@@ -667,7 +666,7 @@
         <p class="paragraph md:paragraph_lg mt-[11px] text-white">
           It is a long established fact will be distracted.
         </p>
-        <button class="btn btn_gold shadow-btnDark mt-[32px]">
+        <button class="btn btn_gold mt-[32px] shadow-btnDark">
           <span>Contact With Us</span>
           <svg
             width="17.150391"
@@ -721,7 +720,7 @@
         <div class="flex flex-wrap justify-evenly gap-[100px] lg:flex-nowrap">
           <nav class="">
             <h3 class="text-lg/tight">Pages</h3>
-            <ul class="text-textSmall mt-[30px] flex flex-col gap-10 text-sm">
+            <ul class="mt-[30px] flex flex-col gap-10 text-sm text-textSmall">
               <li>
                 <a
                   href="#"
@@ -761,7 +760,7 @@
           </nav>
           <nav class="">
             <h3 class="text-lg/tight">Services</h3>
-            <ul class="text-textSmall mt-[30px] flex flex-col gap-10 text-sm">
+            <ul class="mt-[30px] flex flex-col gap-10 text-sm text-textSmall">
               <li>
                 <a
                   href="#"
@@ -802,7 +801,7 @@
           <nav class="">
             <h3 class="text-lg/tight">Contacts</h3>
             <ul
-              class="text-textSmall mt-[30px] flex max-w-[260px] flex-col gap-10 text-sm"
+              class="mt-[30px] flex max-w-[260px] flex-col gap-10 text-sm text-textSmall"
             >
               <li>
                 <a
@@ -830,9 +829,9 @@
         </div>
       </div>
       <div
-        class="border-textSmall mt-[134px] w-full border-t pb-[46px] pt-[40px]"
+        class="mt-[134px] w-full border-t border-textSmall pb-[46px] pt-[40px]"
       >
-        <p class="text-textSmall text-center text-base/normal">
+        <p class="text-center text-base/normal text-textSmall">
           Copyright © Interno | Designed by Victorflow Templates - Powered by
           Webflow
         </p>
